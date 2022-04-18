@@ -1,0 +1,17 @@
+name: Lingo
+description: Execute various CI tasks in Lingo's workflow
+
+inputs:
+  command:
+    description: Which command to execute. Possible values are `validate`, `submit`, <TODO>
+    required: true
+  token:
+    description: GitHub token to fetch data with
+    required: true
+  environment:
+    description: The Lingo environment. Currently, the only possible value is `production`
+    required: true
+
+runs:
+  using: node16
+  main: dist/main.js
