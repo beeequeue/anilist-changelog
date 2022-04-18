@@ -1,0 +1,40 @@
+on:
+  pull_request:
+    paths:
+      - .github/workflows/*
+      - .github/matchers/*
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Set up Go so we can build actionlint from the source
+      - uses: actions/setup-go@v3
+        with:
+          go-version: "^1.18"
+
+      # Cache it so we don't have to download it every time
+      - name: cache actionlint
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: linux-v1-${{ github.sha }}
+          restore-keys: |
+            linux-v1-
+
+      # Install it from a GitHub link with commit hash, meaning we're building it from source from a known version
+      - name: install from source
+        run: go install github.com/rhysd/actionlint/cmd/actionlint@v1.6.12
+
+      # Add matcher so we get annotations in PRs
+      - name: add matcher
+        run: echo "::add-matcher::.github/matchers/actionlint.json"
+
+      # Run it!
+      - name: lint workflow files
+        run: actionlint
