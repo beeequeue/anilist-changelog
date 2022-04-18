@@ -26,7 +26,7 @@ jobs:
       - run: pnpm build
 
       - name: Compress and archive dist folder
-        run: tar -cvf dist.tar.gz dist
+        run: tar -cvf dist.tar.gz dist action.yaml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -103,7 +103,7 @@ jobs:
           name: dist.tar.gz
           path: .
 
-      - name: Compress and archive dist folder
+      - name: Extract artifact folder
         run: tar -xvf dist.tar.gz
 
       - run: ls

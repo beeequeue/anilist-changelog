@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: BeeeQueue/anilist-changelog@main
+      - uses: BeeeQueue/anilist-changelog@dist
 
       - run: git status
