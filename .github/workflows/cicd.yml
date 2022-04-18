@@ -91,7 +91,9 @@ jobs:
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Switch to deployment branch
-        run: git switch dist
+        run: |
+          git fetch origin dist
+          git switch dist
 
       - name: Download artifact
         uses: actions/download-artifact@v2
