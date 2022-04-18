@@ -5,6 +5,7 @@ import { printSchema } from "graphql"
 import * as core from "@actions/core"
 import { diff } from "@graphql-inspector/core"
 
+import { addChangelogEntry, createChangelogEntry } from "./changelog"
 import { optionsSchema } from "./options"
 import { getCurrentSchema, getOldSchema } from "./schemas"
 
@@ -25,10 +26,18 @@ const run = async () => {
     getCurrentSchema(options.data.endpoint),
   ] as const)
 
-  const result = await diff(oldSchema, currentSchema)
+  const changes = await diff(oldSchema, currentSchema)
 
-  console.log(result)
+  const filteredChanges = changes.filter(
+    (change) =>
+      !change.path?.startsWith("@deprecated") && !change.path?.startsWith("@specifiedBy"),
+  )
 
+  if (filteredChanges.length === 0) return
+
+  const changelogEntry = createChangelogEntry(filteredChanges)
+
+  await addChangelogEntry(changelogEntry)
   await fs.writeFile(options.data.schemaFile, printSchema(currentSchema))
 
   core.info(`Finished executing without errors.`)
