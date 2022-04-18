@@ -4,6 +4,14 @@ Automatically generated changelog for the [AniList GraphQL API](https://anilist.
 
 All dates are in UTC.
 
+## 2022-03-01 17:32
+
+### ⚠ Dangerous
+
+- `Query.Media.endDate`: Argument `endDate: FuzzyDateInt` added to field `Query.Media`
+- `Query.Media.season`: Argument `season: MediaSeason` added to field `Query.Media`
+
+
 ## 2020-01-01 12:00:00
 
 ## 🔺 Breaking
