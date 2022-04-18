@@ -7,5 +7,11 @@ module.exports = {
   ],
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: true,
+      },
+    ],
   },
 }

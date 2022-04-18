@@ -1,16 +1,18 @@
-name: Lingo
-description: Execute various CI tasks in Lingo's workflow
+name: AniList GraphQL API Changelog Generator
+description: assadifdsayhbh
 
 inputs:
-  command:
-    description: Which command to execute. Possible values are `validate`, `submit`, <TODO>
-    required: true
-  token:
+  endpoint:
+    description: URL to GraphQL Schema
+    required: false
+    default: https://graphql.anilist.co
+  output-file:
+    description: File to write changelog to
+    required: false
+    default: ./CHANGELOG.md
+  github-token:
     description: GitHub token to fetch data with
-    required: true
-  environment:
-    description: The Lingo environment. Currently, the only possible value is `production`
-    required: true
+    required: false
 
 runs:
   using: node16

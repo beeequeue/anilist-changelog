@@ -1,8 +1,10 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@actions/core': 1.6.0
   '@beequeue/eslint-plugin': 0.5.0
   '@tsconfig/node16': 1.0.2
+  '@types/node': 16.11.27
   dotenv: 16.0.0
   eslint: 8.13.0
   lint-staged: 12.3.8
@@ -10,10 +12,13 @@ specifiers:
   simple-git-hooks: 2.7.0
   tsup: 5.12.5
   typescript: 4.7.0-beta
+  zod: 3.14.4
 
 devDependencies:
+  '@actions/core': 1.6.0
   '@beequeue/eslint-plugin': 0.5.0_53322f8b348afe81d82cf93fe0989eb8
   '@tsconfig/node16': 1.0.2
+  '@types/node': 16.11.27
   dotenv: 16.0.0
   eslint: 8.13.0
   lint-staged: 12.3.8
@@ -21,8 +26,21 @@ devDependencies:
   simple-git-hooks: 2.7.0
   tsup: 5.12.5_typescript@4.7.0-beta
   typescript: 4.7.0-beta
+  zod: 3.14.4
 
 packages:
+
+  /@actions/core/1.6.0:
+    resolution: {integrity: sha512-NB1UAZomZlCV/LmJqkLhNTqtKfFXJZAUPcfl/zqG7EfsQdeUJtaWO98SGbuQ3pydJ3fHl2CvI/51OKYlCYYcaw==}
+    dependencies:
+      '@actions/http-client': 1.0.11
+    dev: true
+
+  /@actions/http-client/1.0.11:
+    resolution: {integrity: sha512-VRYHGQV1rqnROJqdMvGUbY/Kn8vriQe/F9HR2AlYHzmKuM/p3kjNuXhmdBfcVgsvRWTz5C5XW5xvndZrVBuAYg==}
+    dependencies:
+      tunnel: 0.0.6
+    dev: true
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}
@@ -151,6 +169,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
+    dev: true
+
+  /@types/node/16.11.27:
+    resolution: {integrity: sha512-C1pD3kgLoZ56Uuy5lhfOxie4aZlA3UMGLX9rXteq4WitEZH6Rl80mwactt9QG0w0gLFlN/kLBTFnGXtDVWvWQw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -2643,6 +2665,11 @@ packages:
       typescript: 4.7.0-beta
     dev: true
 
+  /tunnel/0.0.6:
+    resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
+    engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
+    dev: true
+
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2772,4 +2799,8 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
+    dev: true
+
+  /zod/3.14.4:
+    resolution: {integrity: sha512-U9BFLb2GO34Sfo9IUYp0w3wJLlmcyGoMd75qU9yf+DrdGA4kEx6e+l9KOkAlyUO0PSQzZCa3TR4qVlcmwqSDuw==}
     dev: true

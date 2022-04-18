@@ -1,11 +1,13 @@
 import * as core from "@actions/core"
 
-import { commands } from "./commands"
+import { optionsSchema } from "./options"
+
+const { endpoint, outputFile } = optionsSchema.parse({
+  endpoint: core.getInput("endpoint", { required: true, trimWhitespace: true }),
+  outputFile: core.getInput("outputFile", { required: true, trimWhitespace: true }),
+})
 
 const run = async () => {
-  const inputCommand = core.getInput("command", { required: true, trimWhitespace: true })
-  const command = commands.find(({ name }) => name === inputCommand)
-
   if (command == null) {
     throw new Error("Invalid command! See `action.yaml` for more info.")
   }
