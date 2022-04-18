@@ -18,12 +18,6 @@ type Query {
     """Filter by the start date of the media"""
     startDate: FuzzyDateInt
 
-    """Filter by the end date of the media"""
-    endDate: FuzzyDateInt
-
-    """Filter by the season the media was released in"""
-    season: MediaSeason
-
     """
     The year of the season (Winter 2017 would also include December 2016 releases). Requires season argument
     """
