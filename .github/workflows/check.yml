@@ -20,7 +20,7 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -am "Publish ${{ github.sha }}"
+          git commit -am "Update changelog"
 
       - name: Push commit
         run: git push
