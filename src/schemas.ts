@@ -8,12 +8,14 @@ import {
 } from "graphql"
 import { request } from "undici"
 
-export const getOldSchema = async (schemaFilePath: string) => {
-  const ast = await fs.readFile(schemaFilePath, "utf8")
+import { Options } from "./options"
+
+export const getOldSchema = async ({ schemaFile }: Pick<Options, "schemaFile">) => {
+  const ast = await fs.readFile(schemaFile, "utf8")
 
   return buildSchema(ast)
 }
-export const getCurrentSchema = async (endpoint: string) => {
+export const getCurrentSchema = async ({ endpoint }: Pick<Options, "endpoint">) => {
   const introspectionResponse = await request(endpoint, {
     method: "POST",
     headers: {

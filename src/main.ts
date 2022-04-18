@@ -6,28 +6,15 @@ import * as core from "@actions/core"
 import { diff } from "@graphql-inspector/core"
 
 import { addChangelogEntry, createChangelogEntry } from "./changelog"
-import { optionsSchema } from "./options"
+import { options } from "./options"
 import { getCurrentSchema, getOldSchema } from "./schemas"
 
-const options = optionsSchema.safeParse({
-  endpoint: core.getInput("endpoint", { required: false, trimWhitespace: true }),
-  schemaFile: core.getInput("schema-file", { required: false, trimWhitespace: true }),
-  changelogFile: core.getInput("changelog-file", {
-    required: false,
-    trimWhitespace: true,
-  }),
-})
-
-if (!options.success) {
-  throw options.error.format()
-}
-
 const run = async () => {
-  core.info(`endpoint: ${options.data.endpoint}, schemaFile: ${options.data.schemaFile}`)
+  core.info(`endpoint: ${options.endpoint}, schemaFile: ${options.schemaFile}`)
 
   const [oldSchema, currentSchema] = await Promise.all([
-    getOldSchema(options.data.schemaFile),
-    getCurrentSchema(options.data.endpoint),
+    getOldSchema(options),
+    getCurrentSchema(options),
   ] as const)
 
   const changes = await diff(oldSchema, currentSchema)
@@ -42,8 +29,8 @@ const run = async () => {
 
   const changelogEntry = createChangelogEntry(filteredChanges)
 
-  await addChangelogEntry(changelogEntry)
-  await fs.writeFile(options.data.schemaFile, printSchema(currentSchema))
+  await addChangelogEntry(options, changelogEntry)
+  await fs.writeFile(options.schemaFile, printSchema(currentSchema))
 
   core.info("Finished executing without errors.")
 }

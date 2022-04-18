@@ -4,6 +4,8 @@ import dedent from "ts-dedent"
 
 import { Change, CriticalityLevel } from "@graphql-inspector/core"
 
+import { Options } from "./options"
+
 const leadingZero = (num: number) => `${num < 10 ? "0" : ""}${num}`
 
 export const createChangelogEntry = (changes: Change[]) => {
@@ -65,8 +67,11 @@ export const createChangelogEntry = (changes: Change[]) => {
   `
 }
 
-export const addChangelogEntry = async (entry: string) => {
-  const contents = await fs.readFile("CHANGELOG.md", "utf8")
+export const addChangelogEntry = async (
+  { changelogFile }: Pick<Options, "changelogFile">,
+  entry: string,
+) => {
+  const contents = await fs.readFile(changelogFile, "utf8")
   const contentLines = contents.split("\n")
   const entryLine = contentLines.findIndex((line) => line.startsWith("## 20"))
 
@@ -82,5 +87,5 @@ export const addChangelogEntry = async (entry: string) => {
     split: contentLines.slice(entryLine),
   })
 
-  await fs.writeFile("CHANGELOG.md", newContents)
+  await fs.writeFile(changelogFile, newContents)
 }
