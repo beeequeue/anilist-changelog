@@ -1,3 +1,5 @@
+name: actionlint
+
 on:
   pull_request:
     paths:
