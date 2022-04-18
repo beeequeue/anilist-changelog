@@ -106,8 +106,6 @@ jobs:
       - name: Extract artifact folder
         run: tar -xvf dist.tar.gz
 
-      - run: ls
-
       - name: Commit changes
         run: |
           git add .

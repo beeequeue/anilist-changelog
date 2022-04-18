@@ -12,4 +12,15 @@ jobs:
 
       - uses: BeeeQueue/anilist-changelog@dist
 
-      - run: git status
+      - name: Set up git config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -am "Publish ${{ github.sha }}"
+
+      - name: Push commit
+        run: git push
