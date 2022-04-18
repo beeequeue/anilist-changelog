@@ -1,0 +1,19 @@
+name: AniList GraphQL API Changelog Generator
+description: assadifdsayhbh
+
+inputs:
+  endpoint:
+    description: URL to GraphQL Schema
+    required: false
+    default: https://graphql.anilist.co
+  schema-file:
+    description: File to write changelog to
+    required: false
+    default: ./CHANGELOG.md
+  github-token:
+    description: GitHub token to fetch data with
+    required: false
+
+runs:
+  using: node16
+  main: dist/main.js
