@@ -81,11 +81,5 @@ export const addChangelogEntry = async (
     ...contentLines.slice(entryLine),
   ].join("\n")
 
-  console.log({
-    contentLines,
-    entryLine,
-    split: contentLines.slice(entryLine),
-  })
-
   await fs.writeFile(changelogFile, newContents)
 }
