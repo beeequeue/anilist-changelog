@@ -6,7 +6,7 @@ inputs:
     description: URL to GraphQL Schema
     required: false
     default: https://graphql.anilist.co
-  output-file:
+  schema-file:
     description: File to write changelog to
     required: false
     default: ./CHANGELOG.md

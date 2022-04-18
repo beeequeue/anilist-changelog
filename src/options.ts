@@ -4,7 +4,7 @@ const trim = (str: string) => str.trim()
 
 export const optionsSchema = zod.object({
   endpoint: zod.string().url().transform(trim),
-  outputFile: zod
+  schemaFile: zod
     .string()
     .regex(/^(\/)?([^/0]+(\/)?)+$/)
     .transform(trim),

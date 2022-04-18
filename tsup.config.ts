@@ -2,8 +2,15 @@ import { defineConfig } from "tsup"
 
 export default defineConfig({
   entry: ["src/main.ts"],
-  format: ["esm"],
+  target: "node16",
+  platform: "node",
+  format: ["cjs"],
+  esbuildOptions: (options) => {
+    options.mainFields = ["module", "main"]
+  },
+
+  minify: true,
   splitting: false,
-  sourcemap: true,
+
   clean: true,
 })

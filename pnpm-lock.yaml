@@ -3,29 +3,35 @@ lockfileVersion: 5.3
 specifiers:
   '@actions/core': 1.6.0
   '@beequeue/eslint-plugin': 0.5.0
+  '@graphql-inspector/core': 3.1.2
   '@tsconfig/node16': 1.0.2
   '@types/node': 16.11.27
   dotenv: 16.0.0
   eslint: 8.13.0
+  graphql: 16.3.0
   lint-staged: 12.3.8
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
   tsup: 5.12.5
   typescript: 4.7.0-beta
+  undici: 5.0.0
   zod: 3.14.4
 
 devDependencies:
   '@actions/core': 1.6.0
   '@beequeue/eslint-plugin': 0.5.0_53322f8b348afe81d82cf93fe0989eb8
+  '@graphql-inspector/core': 3.1.2_graphql@16.3.0
   '@tsconfig/node16': 1.0.2
   '@types/node': 16.11.27
   dotenv: 16.0.0
   eslint: 8.13.0
+  graphql: 16.3.0
   lint-staged: 12.3.8
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
   tsup: 5.12.5_typescript@4.7.0-beta
   typescript: 4.7.0-beta
+  undici: 5.0.0
   zod: 3.14.4
 
 packages:
@@ -121,6 +127,17 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@graphql-inspector/core/3.1.2_graphql@16.3.0:
+    resolution: {integrity: sha512-f+w1LG6JkGuORBVZM9ZM4j/nT2TgPZwk40m7XutWozNKZpguVG8ChQsldAzb9xPpRZ6Qj/qRfMYMyiA4AAqQbg==}
+    peerDependencies:
+      graphql: ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      dependency-graph: 0.11.0
+      graphql: 16.3.0
+      object-inspect: 1.10.3
+      tslib: 2.3.1
     dev: true
 
   /@humanwhocodes/config-array/0.9.5:
@@ -680,6 +697,11 @@ packages:
     dependencies:
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
+    dev: true
+
+  /dependency-graph/0.11.0:
+    resolution: {integrity: sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==}
+    engines: {node: '>= 0.6.0'}
     dev: true
 
   /dir-glob/3.0.1:
@@ -1493,6 +1515,11 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /graphql/16.3.0:
+    resolution: {integrity: sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==}
+    engines: {node: ^12.22.0 || ^14.16.0 || >=16.0.0}
+    dev: true
+
   /has-bigints/1.0.1:
     resolution: {integrity: sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA==}
     dev: true
@@ -1970,6 +1997,10 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /object-inspect/1.10.3:
+    resolution: {integrity: sha512-e5mCJlSH7poANfC8z8S9s9S2IN5/4Zb3aZ33f5s8YqoazCFzNLloLU8r5VCG+G7WoqLvAAZoVMcy3tp/3X0Plw==}
     dev: true
 
   /object-inspect/1.12.0:
@@ -2710,6 +2741,11 @@ packages:
       has-bigints: 1.0.1
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /undici/5.0.0:
+    resolution: {integrity: sha512-VhUpiZ3No1DOPPQVQnsDZyfcbTTcHdcgWej1PdFnSvOeJmOVDgiOHkunJmBLfmjt4CqgPQddPVjSWW0dsTs5Yg==}
+    engines: {node: '>=12.18'}
     dev: true
 
   /uri-js/4.4.1:
