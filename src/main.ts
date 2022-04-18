@@ -12,6 +12,10 @@ import { getCurrentSchema, getOldSchema } from "./schemas"
 const options = optionsSchema.safeParse({
   endpoint: core.getInput("endpoint", { required: false, trimWhitespace: true }),
   schemaFile: core.getInput("schema-file", { required: false, trimWhitespace: true }),
+  changelogFile: core.getInput("changelog-file", {
+    required: false,
+    trimWhitespace: true,
+  }),
 })
 
 if (!options.success) {

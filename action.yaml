@@ -7,6 +7,10 @@ inputs:
     required: false
     default: https://graphql.anilist.co
   schema-file:
+    description: File to read and write known schema to
+    required: false
+    default: ./schema.graphql
+  changelog-file:
     description: File to write changelog to
     required: false
     default: ./CHANGELOG.md
