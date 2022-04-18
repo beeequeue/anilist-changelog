@@ -29,7 +29,9 @@ export const createChangelogEntry = (changes: Change[]) => {
           ### 🔺 Breaking
 
           ${breaking
-            .map((change) => `- \`${change.path}\`: ${change.message.replace(/'/g, "`")}`)
+            .map(
+              (change) => `- \`${change.path!}\`: ${change.message.replace(/'/g, "`")}`,
+            )
             .join("\n")}\n
         `
         : ""
@@ -40,7 +42,9 @@ export const createChangelogEntry = (changes: Change[]) => {
           ### ⚠ Dangerous
 
           ${dangerous
-            .map((change) => `- \`${change.path}\`: ${change.message.replace(/'/g, "`")}`)
+            .map(
+              (change) => `- \`${change.path!}\`: ${change.message.replace(/'/g, "`")}`,
+            )
             .join("\n")}\n
         `
         : ""
@@ -51,7 +55,9 @@ export const createChangelogEntry = (changes: Change[]) => {
           ### ✅ Non-breaking
 
           ${normal
-            .map((change) => `- \`${change.path}\`: ${change.message.replace(/'/g, "`")}`)
+            .map(
+              (change) => `- \`${change.path!}\`: ${change.message.replace(/'/g, "`")}`,
+            )
             .join("\n")}\n
         `
         : ""
