@@ -1,0 +1,108 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: corepack enable
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-${{ runner.os }}-pnpm-
+
+      - run: pnpm install --frozen-lockfile
+        env:
+          NODE_ENV: development
+
+      - run: pnpm build
+
+      - name: Compress and archive dist folder
+        run: tar -cvf dist.tar.gz dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: dist.tar.gz
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: corepack enable
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-${{ runner.os }}-pnpm-
+
+      - run: pnpm install --frozen-lockfile
+        env:
+          NODE_ENV: development
+
+      - run: pnpm lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: corepack enable
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-${{ runner.os }}-pnpm-
+
+      - run: pnpm install --frozen-lockfile
+        env:
+          NODE_ENV: development
+
+      - run: pnpm typecheck
+
+  publish:
+    runs-on: ubuntu-latest
+
+    needs: [build, lint, typecheck]
+
+    steps:
+      - name: Set up git config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Switch to deployment branch
+        run: git switch dist
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: dist.tar.gz
+          path: .
+
+      - name: Compress and archive dist folder
+        run: tar -xvf dist.tar.gz
+
+      - run: ls
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -am "Publish ${{ github.sha }}"
+
+      - name: Push commit
+        run: git push
