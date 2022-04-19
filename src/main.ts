@@ -19,18 +19,12 @@ const run = async () => {
 
   const changes = await diff(oldSchema, currentSchema)
 
-  // Filter out changes that are detected every time
-  const filteredChanges = changes.filter(
-    (change) =>
-      !change.path?.startsWith("@deprecated") && !change.path?.startsWith("@specifiedBy"),
-  )
+  const changelogEntry = createChangelogEntry(changes)
 
-  if (filteredChanges.length === 0) return core.info("No changes detected. Exiting ealy.")
-
-  const changelogEntry = createChangelogEntry(filteredChanges)
-
-  await addChangelogEntry(options, changelogEntry)
-  await fs.writeFile(options.schemaFile, printSchema(currentSchema))
+  if (changelogEntry != null) {
+    await addChangelogEntry(options, changelogEntry)
+    await fs.writeFile(options.schemaFile, printSchema(currentSchema))
+  }
 
   core.info("Finished executing without errors.")
 }

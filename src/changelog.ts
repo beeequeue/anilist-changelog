@@ -2,6 +2,7 @@ import fs from "fs/promises"
 
 import dedent from "ts-dedent"
 
+import * as core from "@actions/core"
 import { Change, CriticalityLevel } from "@graphql-inspector/core"
 
 import { Options } from "./options"
@@ -11,13 +12,24 @@ const leadingZero = (num: number) => `${num < 10 ? "0" : ""}${num}`
 export const createChangelogEntry = (changes: Change[]) => {
   const now = new Date()
 
-  const breaking = changes.filter(
+  // Filter out changes that are detected every time
+  const filteredChanges = changes.filter(
+    (change) =>
+      !change.path?.startsWith("@deprecated") && !change.path?.startsWith("@specifiedBy"),
+  )
+
+  if (filteredChanges.length === 0) {
+    core.info("No changes detected. Exiting ealy.")
+    return null
+  }
+
+  const breaking = filteredChanges.filter(
     ({ criticality }) => criticality.level === CriticalityLevel.Breaking,
   )
-  const dangerous = changes.filter(
+  const dangerous = filteredChanges.filter(
     ({ criticality }) => criticality.level === CriticalityLevel.Dangerous,
   )
-  const normal = changes.filter(
+  const normal = filteredChanges.filter(
     ({ criticality }) => criticality.level === CriticalityLevel.NonBreaking,
   )
 
