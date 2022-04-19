@@ -31,7 +31,7 @@ jobs:
         run: tar -cvf dist.tar.gz dist action.yaml
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: dist.tar.gz
           path: dist.tar.gz
