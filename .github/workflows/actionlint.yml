@@ -20,7 +20,7 @@ jobs:
 
       # Cache it so we don't have to download it every time
       - name: cache actionlint
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cache/go-build
