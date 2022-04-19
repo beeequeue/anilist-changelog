@@ -1,0 +1,42 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - CHANGELOG.md
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/github-script@v6
+        id: entry
+        with:
+          result-encoding: string
+          script: |
+            const fs = require("fs/promises")
+
+            const contents = await fs.readFile("CHANGELOG.md", "utf8")
+            const lines = contents.split("\n")
+
+            const headerLineIndex = lines.findIndex((line) => line.startsWith("## 20"))
+            let endLineIndex = lines.findIndex((line) => 
+              line.startsWith("## 20") && line !== lines[headerLineIndex]
+            )
+            endLineIndex = endLineIndex !== -1 ? endLineIndex : lines.length
+
+            const name = lines[headerLineIndex].slice(3)
+            const tag = name.replace(/[^\d\w-]/g, "-")
+            const body = lines.slice(headerLineIndex + 2, endLineIndex - 1).join("\n")
+
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: tag,
+              name,
+              body,
+            })
