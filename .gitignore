@@ -2,4 +2,4 @@
 
 !.gitignore
 !dist/
-!action.yaml
+!action.yml
