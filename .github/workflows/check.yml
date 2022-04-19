@@ -17,7 +17,7 @@ jobs:
       - name: Check git status
         id: status
         run: |
-          CHANGED_FILES=$(git diff --name-only dist/ action.yml)
+          CHANGED_FILES=$(git diff --name-only -- dist/ action.yml)
           echo "::set-output name=diff-length::${#CHANGED_FILES}"
 
       - name: Set up git config
