@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    outputs:
-      diff-length: ${{ steps.status.outputs.diff-length }}
-
     steps:
       - uses: actions/checkout@v3
 
@@ -30,18 +27,10 @@ jobs:
 
       - run: pnpm build
 
-      - name: Check git status
-        id: status
-        run: |
-          CHANGED_FILES=$(git diff --name-only -- dist/ action.yml)
-          echo "::set-output name=diff-length::${#CHANGED_FILES}"
-
       - name: Compress and archive dist folder
-        if: ${{ steps.status.outputs.diff-length > 0 }}
         run: tar -cvf dist.tar.gz dist action.yml
 
       - name: Upload artifact
-        if: ${{ steps.status.outputs.diff-length > 0 }}
         uses: actions/upload-artifact@v3
         with:
           name: dist.tar.gz
@@ -92,23 +81,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
-    if: ${{ github.ref == 'refs/heads/main' && needs.build.outputs.diff-length > 0 }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: [build, lint, typecheck]
 
     steps:
       - uses: actions/checkout@v3
         with:
           ref: dist
-
-      - name: Set up git config
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-      - name: Switch to deployment branch
-        run: |
-          git fetch origin dist
-          git switch dist
 
       - name: Download artifact
         uses: actions/download-artifact@v3
@@ -119,7 +98,14 @@ jobs:
       - name: Extract artifact folder
         run: tar -xvf dist.tar.gz
 
+      - name: Check git status
+        id: status
+        run: |
+          CHANGED_FILES=$(git diff --name-only -- dist/ action.yml)
+          echo "::set-output name=diff-length::${#CHANGED_FILES}"
+
       - uses: EndBug/add-and-commit@v9
+        if: ${{ steps.status.outputs.diff-length > 0 }}
         with:
           message: "Publish ${{ github.sha }}"
           default_author: github_actions
