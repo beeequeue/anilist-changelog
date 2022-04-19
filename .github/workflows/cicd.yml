@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      changed: ${{ steps.status.outputs.diff-length > 0 }}
+      diff-length: ${{ steps.status.outputs.diff-length }}
 
     steps:
       - uses: actions/checkout@v3
@@ -92,8 +92,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
+    if: ${{ github.ref == 'refs/heads/main' && needs.build.outputs.diff-length > 0 }}
     needs: [build, lint, typecheck]
-    if: ${{ github.ref == 'refs/heads/main' && needs.build.outputs.changed }}
 
     steps:
       - uses: actions/checkout@v3
