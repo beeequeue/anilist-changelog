@@ -26,6 +26,4 @@ jobs:
           message: Update changelog & schema
           default_author: github_actions
           push: true
-          add:
-            - schema.graphql
-            - CHANGELOG.md
+          add: "schema.graphql CHANGELOG.md"
