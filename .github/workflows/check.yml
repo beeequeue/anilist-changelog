@@ -21,7 +21,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add .
+          git add dist/ action.yml
           git commit -am "Update changelog"
 
       - name: Push commit

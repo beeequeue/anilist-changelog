@@ -28,7 +28,7 @@ jobs:
       - run: pnpm build
 
       - name: Compress and archive dist folder
-        run: tar -cvf dist.tar.gz dist action.yaml
+        run: tar -cvf dist.tar.gz dist action.yml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
