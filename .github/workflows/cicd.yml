@@ -119,10 +119,8 @@ jobs:
       - name: Extract artifact folder
         run: tar -xvf dist.tar.gz
 
-      - name: Commit changes
-        run: |
-          git add .
-          git commit -am "Publish ${{ github.sha }}"
-
-      - name: Push commit
-        run: git push
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: "Publish ${{ github.sha }}"
+          default_author: github_actions
+          push: true
