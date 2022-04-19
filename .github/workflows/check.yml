@@ -14,15 +14,24 @@ jobs:
 
       - uses: BeeeQueue/anilist-changelog@dist
 
+      - name: Check git status
+        id: status
+        run: |
+          CHANGED_FILES=$(git diff --name-only dist/ action.yml)
+          echo "::set-output name=diff-length::${#CHANGED_FILES}"
+
       - name: Set up git config
+        if: ${{ steps.status.outputs.diff-length > 0 }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Commit changes
+        if: ${{ steps.status.outputs.diff-length > 0 }}
         run: |
           git add dist/ action.yml
           git commit -am "Update changelog"
 
       - name: Push commit
+        if: ${{ steps.status.outputs.diff-length > 0 }}
         run: git push
