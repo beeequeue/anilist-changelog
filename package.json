@@ -4,7 +4,7 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@6.32.9",
+  "packageManager": "pnpm@6.32.10",
   "engines": {
     "node": ">=16"
   },
