@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@actions/core': 1.6.0
+  '@actions/core': 1.7.0
   '@beequeue/eslint-plugin': 0.5.0
   '@graphql-inspector/core': 3.1.2
   '@tsconfig/node16': 1.0.2
@@ -19,7 +19,7 @@ specifiers:
   zod: 3.14.4
 
 devDependencies:
-  '@actions/core': 1.6.0
+  '@actions/core': 1.7.0
   '@beequeue/eslint-plugin': 0.5.0_7078e4cdb7a5be5193b399762cbc95c4
   '@graphql-inspector/core': 3.1.2_graphql@16.3.0
   '@tsconfig/node16': 1.0.2
@@ -38,8 +38,8 @@ devDependencies:
 
 packages:
 
-  /@actions/core/1.6.0:
-    resolution: {integrity: sha512-NB1UAZomZlCV/LmJqkLhNTqtKfFXJZAUPcfl/zqG7EfsQdeUJtaWO98SGbuQ3pydJ3fHl2CvI/51OKYlCYYcaw==}
+  /@actions/core/1.7.0:
+    resolution: {integrity: sha512-7fPSS7yKOhTpgLMbw7lBLc1QJWvJBBAgyTX2PEhagWcKK8t0H8AKCoPMfnrHqIm5cRYH4QFPqD1/ruhuUE7YcQ==}
     dependencies:
       '@actions/http-client': 1.0.11
     dev: true
