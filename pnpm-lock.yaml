@@ -5,7 +5,7 @@ specifiers:
   '@beequeue/eslint-plugin': 0.5.0
   '@graphql-inspector/core': 3.1.2
   '@tsconfig/node16': 1.0.2
-  '@types/node': 16.11.31
+  '@types/node': 16.11.32
   dotenv: 16.0.0
   eslint: 8.14.0
   graphql: 16.4.0
@@ -23,7 +23,7 @@ devDependencies:
   '@beequeue/eslint-plugin': 0.5.0_95c638f7eeb8a4546a918ab477da1fd4
   '@graphql-inspector/core': 3.1.2_graphql@16.4.0
   '@tsconfig/node16': 1.0.2
-  '@types/node': 16.11.31
+  '@types/node': 16.11.32
   dotenv: 16.0.0
   eslint: 8.14.0
   graphql: 16.4.0
@@ -190,8 +190,8 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
-  /@types/node/16.11.31:
-    resolution: {integrity: sha512-wh/d0pcu/Ie2mqTIqh4tjd0mLAB4JWxOjHQtLN20HS7sjMHiV4Afr+90hITTyZcxowwha5wjv32jGEn1zkEFMg==}
+  /@types/node/16.11.32:
+    resolution: {integrity: sha512-+fnfNvG5JQdC1uGZiTx+0QVtoOHcggy6+epx65JYroPGsE1uhp+vo5kioiGKsAkor6ocwHteU2EvO7N8vtOZtA==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
