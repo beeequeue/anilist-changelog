@@ -31,7 +31,7 @@
     "@tsconfig/node16": "1.0.2",
     "@types/node": "16.11.33",
     "dotenv": "16.0.0",
-    "eslint": "8.14.0",
+    "eslint": "8.15.0",
     "graphql": "16.4.0",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
