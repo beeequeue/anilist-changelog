@@ -8,7 +8,7 @@ specifiers:
   '@types/node': 16.11.33
   dotenv: 16.0.0
   eslint: 8.15.0
-  graphql: 16.4.0
+  graphql: 16.5.0
   lint-staged: 12.4.1
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
@@ -21,12 +21,12 @@ specifiers:
 devDependencies:
   '@actions/core': 1.8.0
   '@beequeue/eslint-plugin': 0.5.0_0ef8082c7b3eafa1ce367b061987822b
-  '@graphql-inspector/core': 3.1.2_graphql@16.4.0
+  '@graphql-inspector/core': 3.1.2_graphql@16.5.0
   '@tsconfig/node16': 1.0.2
   '@types/node': 16.11.33
   dotenv: 16.0.0
   eslint: 8.15.0
-  graphql: 16.4.0
+  graphql: 16.5.0
   lint-staged: 12.4.1
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
@@ -132,13 +132,13 @@ packages:
       - supports-color
     dev: true
 
-  /@graphql-inspector/core/3.1.2_graphql@16.4.0:
+  /@graphql-inspector/core/3.1.2_graphql@16.5.0:
     resolution: {integrity: sha512-f+w1LG6JkGuORBVZM9ZM4j/nT2TgPZwk40m7XutWozNKZpguVG8ChQsldAzb9xPpRZ6Qj/qRfMYMyiA4AAqQbg==}
     peerDependencies:
       graphql: ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       dependency-graph: 0.11.0
-      graphql: 16.4.0
+      graphql: 16.5.0
       object-inspect: 1.10.3
       tslib: 2.3.1
     dev: true
@@ -1558,8 +1558,8 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /graphql/16.4.0:
-    resolution: {integrity: sha512-tYDNcRvKCcfHREZYje3v33NSrSD/ZpbWWdPtBtUUuXx9NCo/2QDxYzNqCnMvfsrnbwRpEHMovVrPu/ERoLrIRg==}
+  /graphql/16.5.0:
+    resolution: {integrity: sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: true
 
