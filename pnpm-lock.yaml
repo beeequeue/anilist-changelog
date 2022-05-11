@@ -6,7 +6,7 @@ specifiers:
   '@graphql-inspector/core': 3.1.2
   '@tsconfig/node16': 1.0.2
   '@types/node': 16.11.34
-  dotenv: 16.0.0
+  dotenv: 16.0.1
   eslint: 8.15.0
   graphql: 16.5.0
   lint-staged: 12.4.1
@@ -24,7 +24,7 @@ devDependencies:
   '@graphql-inspector/core': 3.1.2_graphql@16.5.0
   '@tsconfig/node16': 1.0.2
   '@types/node': 16.11.34
-  dotenv: 16.0.0
+  dotenv: 16.0.1
   eslint: 8.15.0
   graphql: 16.5.0
   lint-staged: 12.4.1
@@ -738,8 +738,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dotenv/16.0.0:
-    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
+  /dotenv/16.0.1:
+    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
     engines: {node: '>=12'}
     dev: true
 
