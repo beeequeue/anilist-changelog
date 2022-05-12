@@ -16,7 +16,7 @@ specifiers:
   tsup: 5.12.7
   typescript: 4.7.0-dev.20220506
   undici: 5.2.0
-  zod: 3.15.1
+  zod: 3.16.0
 
 devDependencies:
   '@actions/core': 1.8.0
@@ -34,7 +34,7 @@ devDependencies:
   tsup: 5.12.7_typescript@4.7.0-dev.20220506
   typescript: 4.7.0-dev.20220506
   undici: 5.2.0
-  zod: 3.15.1
+  zod: 3.16.0
 
 packages:
 
@@ -2885,6 +2885,6 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /zod/3.15.1:
-    resolution: {integrity: sha512-WAdjcoOxa4S9oc/u7fTbC3CC7uVqptLLU0LKqS8RDBOrCXp2t5avM8BUfgNVZJymGWAx6SEUYxWPPoYuQ5rgwQ==}
+  /zod/3.16.0:
+    resolution: {integrity: sha512-szrIkryADbTM+xBt2a1KoS2CJQXec4f9xG78bj5MJeEH/XqmmHpnO+fG3IE115AKBJak+2HrbxLZkc9mhdbDKA==}
     dev: true
