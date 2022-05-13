@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@actions/core': 1.8.0
+  '@actions/core': 1.8.2
   '@beequeue/eslint-plugin': 0.5.0
   '@graphql-inspector/core': 3.1.2
   '@tsconfig/node16': 1.0.2
@@ -19,7 +19,7 @@ specifiers:
   zod: 3.16.0
 
 devDependencies:
-  '@actions/core': 1.8.0
+  '@actions/core': 1.8.2
   '@beequeue/eslint-plugin': 0.5.0_0ef8082c7b3eafa1ce367b061987822b
   '@graphql-inspector/core': 3.1.2_graphql@16.5.0
   '@tsconfig/node16': 1.0.2
@@ -38,14 +38,14 @@ devDependencies:
 
 packages:
 
-  /@actions/core/1.8.0:
-    resolution: {integrity: sha512-XirM+Zo/PFlA+1h+i4bkfvagujta+LIM2AOSzPbt8JqXbbuxb1HTB+FqIyaKmue9yiCx/JIJY6pXsOl3+T8JGw==}
+  /@actions/core/1.8.2:
+    resolution: {integrity: sha512-FXcBL7nyik8K5ODeCKlxi+vts7torOkoDAKfeh61EAkAy1HAvwn9uVzZBY0f15YcQTcZZ2/iSGBFHEuioZWfDA==}
     dependencies:
-      '@actions/http-client': 1.0.11
+      '@actions/http-client': 2.0.1
     dev: true
 
-  /@actions/http-client/1.0.11:
-    resolution: {integrity: sha512-VRYHGQV1rqnROJqdMvGUbY/Kn8vriQe/F9HR2AlYHzmKuM/p3kjNuXhmdBfcVgsvRWTz5C5XW5xvndZrVBuAYg==}
+  /@actions/http-client/2.0.1:
+    resolution: {integrity: sha512-PIXiMVtz6VvyaRsGY268qvj57hXQEpsYogYOu2nrQhlf+XCGmZstmuZBbAybUl1nQGnvS1k1eEsQ69ZoD7xlSw==}
     dependencies:
       tunnel: 0.0.6
     dev: true
