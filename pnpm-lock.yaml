@@ -13,7 +13,7 @@ specifiers:
   prettier: 2.6.2
   simple-git-hooks: 2.8.0
   ts-dedent: 2.2.0
-  tsup: 6.0.1
+  tsup: 6.1.0
   typescript: 4.7.3
   undici: 5.4.0
   zod: 3.17.3
@@ -31,7 +31,7 @@ devDependencies:
   prettier: 2.6.2
   simple-git-hooks: 2.8.0
   ts-dedent: 2.2.0
-  tsup: 6.0.1_typescript@4.7.3
+  tsup: 6.1.0_typescript@4.7.3
   typescript: 4.7.3
   undici: 5.4.0
   zod: 3.17.3
@@ -1948,7 +1948,7 @@ packages:
     dev: true
 
   /lodash.sortby/4.7.0:
-    resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
+    resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
     dev: true
 
   /lodash/4.17.21:
@@ -2774,8 +2774,8 @@ packages:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: true
 
-  /tsup/6.0.1_typescript@4.7.3:
-    resolution: {integrity: sha512-2Pl1YkEEvzfg4aYgwUILaHV0wwZQKO7mNHMQChyzdCNlQqf11eug7gWk86XCb3CvRofCXBX87x73BTGjyS3cOQ==}
+  /tsup/6.1.0_typescript@4.7.3:
+    resolution: {integrity: sha512-kKSzFbX996OXkbQif23LV0xDDvxnhH95Hw39ku7Kx1NEfJxcxvqexGGEDgRyd5dlzIJI4U8mySfPeq5iExYwnw==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
