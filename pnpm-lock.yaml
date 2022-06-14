@@ -15,7 +15,7 @@ specifiers:
   ts-dedent: 2.2.0
   tsup: 6.1.2
   typescript: 4.7.3
-  undici: 5.4.0
+  undici: 5.5.1
   zod: 3.17.3
 
 devDependencies:
@@ -33,7 +33,7 @@ devDependencies:
   ts-dedent: 2.2.0
   tsup: 6.1.2_typescript@4.7.3
   typescript: 4.7.3
-  undici: 5.4.0
+  undici: 5.5.1
   zod: 3.17.3
 
 packages:
@@ -2867,8 +2867,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici/5.4.0:
-    resolution: {integrity: sha512-A1SRXysDg7J+mVP46jF+9cKANw0kptqSFZ8tGyL+HBiv0K1spjxPX8Z4EGu+Eu6pjClJUBdnUPlxrOafR668/g==}
+  /undici/5.5.1:
+    resolution: {integrity: sha512-MEvryPLf18HvlCbLSzCW0U00IMftKGI5udnjrQbC5D4P0Hodwffhv+iGfWuJwg16Y/TK11ZFK8i+BPVW2z/eAw==}
     engines: {node: '>=12.18'}
     dev: true
 
