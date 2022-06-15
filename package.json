@@ -29,7 +29,7 @@
     "@beequeue/eslint-plugin": "0.6.0",
     "@graphql-inspector/core": "3.1.2",
     "@tsconfig/node16": "1.0.3",
-    "@types/node": "16.11.39",
+    "@types/node": "16.11.40",
     "dotenv": "16.0.1",
     "eslint": "8.17.0",
     "graphql": "16.5.0",
