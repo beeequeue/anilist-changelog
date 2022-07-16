@@ -27,7 +27,7 @@
   "devDependencies": {
     "@actions/core": "1.9.0",
     "@beequeue/eslint-plugin": "0.6.0",
-    "@graphql-inspector/core": "3.2.0",
+    "@graphql-inspector/core": "3.3.0",
     "@tsconfig/node16": "1.0.3",
     "@types/node": "16.11.45",
     "dotenv": "16.0.1",
