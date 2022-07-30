@@ -13,7 +13,7 @@ specifiers:
   prettier: 2.7.1
   simple-git-hooks: 2.8.0
   ts-dedent: 2.2.0
-  tsup: 6.2.0
+  tsup: 6.2.1
   typescript: 4.7.4
   undici: 5.8.0
   zod: 3.17.10
@@ -31,7 +31,7 @@ devDependencies:
   prettier: 2.7.1
   simple-git-hooks: 2.8.0
   ts-dedent: 2.2.0
-  tsup: 6.2.0_typescript@4.7.4
+  tsup: 6.2.1_typescript@4.7.4
   typescript: 4.7.4
   undici: 5.8.0
   zod: 3.17.10
@@ -2774,8 +2774,8 @@ packages:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: true
 
-  /tsup/6.2.0_typescript@4.7.4:
-    resolution: {integrity: sha512-PNRQY/eUrtQgPHITOa9qU1Qss2AKHZl9OJFMsQGF+rpcQBMIYh5i0BUh5Gam8C8J0OuNQOGazqBEQHWMFLJKlQ==}
+  /tsup/6.2.1_typescript@4.7.4:
+    resolution: {integrity: sha512-KhBhCqVA3bHrIWhkcqTUA7R69H05IcBlHEtCVLEu42XDGUzz+bDqCcfu5PwpkKJ8DqK5tpdgM/qmyk4DdUbkZw==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
