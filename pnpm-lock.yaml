@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@actions/core': 1.9.0
+  '@actions/core': 1.9.1
   '@beequeue/eslint-plugin': 0.7.0
   '@graphql-inspector/core': 3.3.0
   '@tsconfig/node16': 1.0.3
@@ -19,7 +19,7 @@ specifiers:
   zod: 3.17.10
 
 devDependencies:
-  '@actions/core': 1.9.0
+  '@actions/core': 1.9.1
   '@beequeue/eslint-plugin': 0.7.0_swk2g7ygmfleszo5c33j4vooni
   '@graphql-inspector/core': 3.3.0_graphql@16.5.0
   '@tsconfig/node16': 1.0.3
@@ -38,10 +38,11 @@ devDependencies:
 
 packages:
 
-  /@actions/core/1.9.0:
-    resolution: {integrity: sha512-5pbM693Ih59ZdUhgk+fts+bUWTnIdHV3kwOSr+QIoFHMLg7Gzhwm0cifDY/AG68ekEJAkHnQVpcy4f6GjmzBCA==}
+  /@actions/core/1.9.1:
+    resolution: {integrity: sha512-5ad+U2YGrmmiw6du20AQW5XuWo7UKN2052FjSV7MX+Wfjf8sCqcsZe62NfgHys4QI4/Y+vQvLKYL8jWtA1ZBTA==}
     dependencies:
       '@actions/http-client': 2.0.1
+      uuid: 8.3.2
     dev: true
 
   /@actions/http-client/2.0.1:
@@ -3040,6 +3041,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
     dev: true
 
   /v8-compile-cache/2.3.0:
