@@ -5,7 +5,7 @@ specifiers:
   '@beequeue/eslint-plugin': 0.7.0
   '@graphql-inspector/core': 3.3.0
   '@tsconfig/node16': 1.0.3
-  '@types/node': 16.11.49
+  '@types/node': 16.11.52
   dotenv: 16.0.1
   eslint: 8.22.0
   graphql: 16.6.0
@@ -15,7 +15,7 @@ specifiers:
   ts-dedent: 2.2.0
   tsup: 6.2.2
   typescript: 4.7.4
-  undici: 5.8.2
+  undici: 5.9.1
   zod: 3.18.0
 
 devDependencies:
@@ -23,7 +23,7 @@ devDependencies:
   '@beequeue/eslint-plugin': 0.7.0_zczhdx677l6mw2hrju5deojgfm
   '@graphql-inspector/core': 3.3.0_graphql@16.6.0
   '@tsconfig/node16': 1.0.3
-  '@types/node': 16.11.49
+  '@types/node': 16.11.52
   dotenv: 16.0.1
   eslint: 8.22.0
   graphql: 16.6.0
@@ -33,7 +33,7 @@ devDependencies:
   ts-dedent: 2.2.0
   tsup: 6.2.2_typescript@4.7.4
   typescript: 4.7.4
-  undici: 5.8.2
+  undici: 5.9.1
   zod: 3.18.0
 
 packages:
@@ -217,8 +217,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/16.11.49:
-    resolution: {integrity: sha512-Abq9fBviLV93OiXMu+f6r0elxCzRwc0RC5f99cU892uBITL44pTvgvEqlRlPRi8EGcO1z7Cp8A4d0s/p3J/+Nw==}
+  /@types/node/16.11.52:
+    resolution: {integrity: sha512-GnstYouCa9kbYokBCWEVrszJ1P2rGAQpKrqACHKuixkaT8XGu8nsqHvEUIGqDs5vwtsJ7LrYqnPDKRD1V+M39A==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -3038,8 +3038,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici/5.8.2:
-    resolution: {integrity: sha512-3KLq3pXMS0Y4IELV045fTxqz04Nk9Ms7yfBBHum3yxsTR4XNn+ZCaUbf/mWitgYDAhsplQ0B1G4S5D345lMO3A==}
+  /undici/5.9.1:
+    resolution: {integrity: sha512-6fB3a+SNnWEm4CJbgo0/CWR8RGcOCQP68SF4X0mxtYTq2VNN8T88NYrWVBAeSX+zb7bny2dx2iYhP3XHi00omg==}
     engines: {node: '>=12.18'}
     dev: true
 
