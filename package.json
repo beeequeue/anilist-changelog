@@ -4,7 +4,7 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.13.5",
+  "packageManager": "pnpm@7.14.0",
   "engines": {
     "node": ">=16.15"
   },
@@ -29,15 +29,15 @@
     "@beequeue/eslint-plugin": "0.8.0",
     "@graphql-inspector/core": "3.4.0",
     "@tsconfig/node16": "1.0.3",
-    "@types/node": "16.11.66",
+    "@types/node": "16.18.0",
     "dotenv": "16.0.3",
-    "eslint": "8.25.0",
+    "eslint": "8.26.0",
     "graphql": "16.6.0",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
-    "simple-git-hooks": "2.8.0",
+    "simple-git-hooks": "2.8.1",
     "ts-dedent": "2.2.0",
-    "tsup": "6.2.3",
+    "tsup": "6.3.0",
     "typescript": "4.8.4",
     "undici": "5.11.0",
     "zod": "3.19.1"
