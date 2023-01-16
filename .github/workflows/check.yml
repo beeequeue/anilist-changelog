@@ -18,7 +18,7 @@ jobs:
         id: status
         run: |
           CHANGED_FILES=$(git diff --name-only -- dist/ action.yml)
-          echo "::set-output name=diff-length::${#CHANGED_FILES}"
+          echo "diff-length=${#CHANGED_FILES}" >> $GITHUB_OUTPUT
 
       - uses: EndBug/add-and-commit@v9
         if: ${{ steps.status.outputs.diff-length > 0 }}
