@@ -17,7 +17,7 @@ jobs:
       - name: Check git status
         id: status
         run: |
-          CHANGED_FILES=$(git diff --name-only -- dist/ action.yml)
+          CHANGED_FILES="$(git diff --name-only -- dist/ action.yml)"
           echo "diff-length=${#CHANGED_FILES}" >> $GITHUB_OUTPUT
 
       - uses: EndBug/add-and-commit@v9
