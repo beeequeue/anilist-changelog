@@ -4,7 +4,7 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.29.0",
+  "packageManager": "pnpm@7.29.1",
   "engines": {
     "node": ">=16.15"
   },
@@ -31,9 +31,9 @@
     "@tsconfig/node16": "1.0.3",
     "@types/node": "16.18.14",
     "dotenv": "16.0.3",
-    "eslint": "8.35.0",
+    "eslint": "8.36.0",
     "graphql": "16.6.0",
-    "lint-staged": "13.1.2",
+    "lint-staged": "13.2.0",
     "prettier": "2.8.4",
     "simple-git-hooks": "2.8.1",
     "ts-dedent": "2.2.0",
