@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@actions/core': 1.10.0
   '@beequeue/eslint-plugin': 1.1.2
-  '@graphql-inspector/core': 3.5.1
+  '@graphql-inspector/core': 4.0.2
   '@tsconfig/node16': 1.0.3
   '@types/node': 16.18.16
   dotenv: 16.0.3
@@ -21,7 +21,7 @@ specifiers:
 devDependencies:
   '@actions/core': 1.10.0
   '@beequeue/eslint-plugin': 1.1.2_cxk2izsnbljdhebs7ezdbimyva
-  '@graphql-inspector/core': 3.5.1_graphql@16.6.0
+  '@graphql-inspector/core': 4.0.2_graphql@16.6.0
   '@tsconfig/node16': 1.0.3
   '@types/node': 16.18.16
   dotenv: 16.0.3
@@ -351,10 +351,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@graphql-inspector/core/3.5.1_graphql@16.6.0:
-    resolution: {integrity: sha512-aZ6kWU2gyf56d0asExNSL4LXSegbd1IvZdw/DM2dUNSlND53w2UczYsM9/7OXeRJHn5NK6UP+8cjHkAMDToKUA==}
+  /@graphql-inspector/core/4.0.2_graphql@16.6.0:
+    resolution: {integrity: sha512-hySZ6DXCwfZ1/gA506rjV0ZDheKyjxGMroHnms9VSf2hWBk3Uaa4UQ3utCRkSSTvvLCAzsf3IaJB0MsFKCb3oA==}
     peerDependencies:
-      graphql: ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       dependency-graph: 0.11.0
       graphql: 16.6.0
